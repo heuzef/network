@@ -3,7 +3,7 @@ from diagrams.custom import Custom
 from datetime import datetime
 today = datetime.today()
 
-with Diagram("Carte r&eacute;seau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , show=False, filename="network", outformat=["png", "svg", "pdf"], direction="TB"):
+with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , show=False, filename="network", outformat=["png", "svg", "pdf"], direction="TB"):
 
 	# Custom icons
 	internet = Custom("Internet", "icons/internet.png")
@@ -11,7 +11,7 @@ with Diagram("Carte r&eacute;seau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:
 	ezy = Custom("Elocky EZY", "icons/cloud-keys.png")
 	elocky = Custom("Serveur Elocky", "icons/server-cloud.png")
 	wifi_free = Custom("Wi-Fi Free \n heuzef-cognac  \n  192.168.0.0/24", "icons/wifi.png")
-	devices = Custom("P&eacute;riph&eacute;riques", "icons/devices.png")
+	devices = Custom("Peripheriques", "icons/devices.png")
 	aura = Custom("Aura", "icons/clock.png")
 	withings = Custom("Serveur Withings", "icons/server-cloud.png")
 	imprimante = Custom("imprimante.heuzef.com", "icons/print.png")
@@ -20,7 +20,7 @@ with Diagram("Carte r&eacute;seau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:
 	# Clusters
 	with Cluster("[WIP] Zone GUEST \n VLAN 20 \n DHCP : 192.168.10.???-???"):
 		GUEST = Custom("192.168.20.0/24", "icons/networking.png")
-		wifi_guest = Custom("[WIP] \n Wi-Fi invit&eacute; \n 192.168.20.0/24", "icons/wifi.png")
+		wifi_guest = Custom("[WIP] \n Wi-Fi invite \n 192.168.20.0/24", "icons/wifi.png")
 
 	with Cluster("Zone HOME \n VLAN 10 \n DHCP : 192.168.10.1-99"):
 		HOME = Custom("192.168.10.0/24", "icons/networking.png")
