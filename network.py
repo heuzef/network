@@ -3,7 +3,7 @@ from diagrams.custom import Custom
 from datetime import datetime
 today = datetime.today()
 
-with Diagram("Carte r&eacute;seau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , show=False, filename="network", direction="TB"):
+with Diagram("Carte r&eacute;seau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , show=False, filename="network", outformat=["png", "svg", "pdf"], direction="TB"):
 
 	# Custom icons
 	internet = Custom("Internet", "icons/internet.png")
