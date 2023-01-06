@@ -56,6 +56,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		zomboid = Custom("[VM STOPPED] \n zomboid \n 192.168.100.156", "icons/status-stopped.png")
 		couvreur_cognac_fr = Custom("[VM] \n couvreur-cognac.fr \n 192.168.100.157", "icons/web.png")
 		linux_cognac_fr = Custom("[VM STOPPED] \n linux-cognac.fr \n 192.168.100.158", "icons/status-stopped.png")
+		cognhacker_net = Custom("[VM] \n cognhacker.net \n 192.168.100.159", "icons/cognhacker.png")
 
 	with Cluster("SPARE"):
 		brix = Custom("brix.heuzef.com \n 192.168.10.102", "icons/cpu.png")
@@ -105,3 +106,4 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	DMZ - zomboid
 	DMZ - couvreur_cognac_fr
 	DMZ - linux_cognac_fr
+	DMZ - cognhacker_net 
