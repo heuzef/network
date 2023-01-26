@@ -14,6 +14,8 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	devices = Custom("Peripheriques", "icons/devices.png")
 	aura = Custom("Aura", "icons/clock.png")
 	withings = Custom("Serveur Withings", "icons/server-cloud.png")
+	dyadpro = Custom("Dyad Pro", "icons/roborock.png")
+	roborock = Custom("Serveur Roborock", "icons/server-cloud.png")
 	imprimante = Custom("imprimante.heuzef.com", "icons/print.png")
 	firewall = Custom("firewall.heuzef.com \n 192.168.0.2 \n OpenVPN 10.100.0.0/24", "icons/firewall.png")
 
@@ -68,6 +70,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	wifi_free << Edge(color="blue", style="dotted") << devices
 	wifi_free << Edge(color="blue", style="dotted") << imprimante
 	wifi_free << Edge(color="purple", style="dotted") << aura << Edge(color="purple") << withings
+	wifi_free << Edge(color="purple", style="dotted") << dyadpro << Edge(color="purple") << roborock
 	router >> Edge(color="purple") >> ezy << Edge(color="purple", label="VPN over HTTPS") << elocky
 
 	firewall >> Edge(style="dotted") >> GUEST
