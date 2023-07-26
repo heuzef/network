@@ -32,7 +32,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		bmc = Custom("bmc.heuzef.com \n 192.168.10.111", "icons/controls.png")
 		media = Custom("media.heuzef.com \n 192.168.10.112", "icons/media-services.png")
 		cao = Custom("[VM STOPPED] \n cao.heuzef.com \n 192.168.10.113", "icons/status-stopped.png")
-		backup = Custom("[VM] \n backup.heuzef.com \n 192.168.10.114", "icons/backup.png")
+		backup = Custom("[VM] \n backup.heuzef.com \n 192.168.10.114", "icons/borg.png")
 		wintest = Custom("[VM] \n wintest.heuzef.com \n 192.168.10.149", "icons/server.png")
 		hongli = Custom("[VM] \n hongli.heuzef.com \n 192.168.10.150", "icons/vm.png")
 		switch = Custom("switch.heuzef.com \n 192.168.10.201", "icons/switch.png")
