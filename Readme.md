@@ -2,9 +2,11 @@
 
 ## Installation
 
+````
 dnf install -y python3 python3-pip graphviz inkscape
 echo -e "diagrams==0.21.1\ngraphviz==0.16" | tee requirements.txt
 pip3 install -r requirements.txt
+````
 
 ## Mise en service
 
@@ -39,7 +41,7 @@ https://github.com/mingrammer/diagrams
 https://code.benco.io/icon-collection/azure-icons/
 
 ### Installation
-git clone https://github.com/benc-uk/icon-collection.git
+``git clone https://github.com/benc-uk/icon-collection.git``
 
 ### Récupérer et convertir une image de la collection avec Inkscape
 
