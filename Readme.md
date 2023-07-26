@@ -36,9 +36,9 @@ with Diagram("Network", show=False, filename="network", direction="TB"):
 
 
 ## Icon-Collection
-https://diagrams.mingrammer.com/
-https://github.com/mingrammer/diagrams
-https://code.benco.io/icon-collection/azure-icons/
+* https://diagrams.mingrammer.com
+* https://github.com/mingrammer/diagrams
+* https://code.benco.io/icon-collection/azure-icons
 
 ### Installation
 ``git clone https://github.com/benc-uk/icon-collection.git``
