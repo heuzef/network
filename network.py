@@ -50,6 +50,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		lemurier_immo = Custom("[VM] \n lemurier.immo \n 192.168.100.152", "icons/web.png")
 		couvreur_cognac_fr = Custom("[VM] \n couvreur-cognac.fr \n 192.168.100.157", "icons/web.png")
 		cognhacker_net = Custom("[VM] \n cognhacker.net \n 192.168.100.159", "icons/cognhacker.png")
+		beboop_boo = Custom("[VM] \n beboop.boo \n 192.168.100.160", "icons/web.png")
 
 	with Cluster("SPARE"):
 		brix = Custom("brix.heuzef.com \n 192.168.10.102", "icons/cpu.png")
@@ -92,3 +93,4 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	DMZ - lemurier_immo
 	DMZ - couvreur_cognac_fr
 	DMZ - cognhacker_net
+	DMZ - beboop_boo
