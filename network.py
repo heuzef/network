@@ -34,7 +34,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		cao = Custom("[VM STOPPED] \n cao.heuzef.com \n 192.168.10.113", "icons/status-stopped.png")
 		backup = Custom("[VM] \n backup.heuzef.com \n 192.168.10.114", "icons/borg.png")
 		wintest = Custom("[VM] \n wintest.heuzef.com \n 192.168.10.149", "icons/server.png")
-		hongli = Custom("[VM] \n hongli.heuzef.com \n 192.168.10.150", "icons/vm.png")
+		hongli = Custom("[VM STOPPED] \n hongli.heuzef.com \n 192.168.10.150", "icons/status-stopped.png")
 		switch = Custom("switch.heuzef.com \n 192.168.10.201", "icons/switch.png")
 		octoprint = Custom("octoprint.heuzef.com \n 192.168.10.203", "icons/octoprint.png")
 
@@ -42,7 +42,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		DMZ = Custom("192.168.100.0/24", "icons/networking.png")
 		web = Custom("[VM STOPPED] \n web.heuzef.com \n 192.168.100.101", "icons/status-stopped.png")
 		password = Custom("[VM] \n password.heuzef.com \n 192.168.100.102", "icons/lesspass.png")
-		heuzef_link = Custom("[VM] \n heuzef.link \n 192.168.100.103", "icons/lstu.png")
+		heuzef_link = Custom("[VM] \n heuzef.link \n 192.168.100.103", "icons/shlink.png")
 		git = Custom("[VM] \n git.heuzef.com \n 192.168.100.104", "icons/gitea.png")
 		www = Custom("[VM] \n www.heuzef.com \n 192.168.100.105", "icons/web.png")
 		track = Custom("[VM STOPPED] \n track.heuzef.com \n 192.168.100.106", "icons/status-stopped.png")
@@ -109,4 +109,4 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	DMZ - zomboid
 	DMZ - couvreur_cognac_fr
 	DMZ - linux_cognac_fr
-	DMZ - cognhacker_net 
+	DMZ - cognhacker_net
