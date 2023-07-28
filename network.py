@@ -54,7 +54,6 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 
 	with Cluster("SPARE"):
 		brix = Custom("brix.heuzef.com \n 192.168.10.102", "icons/cpu.png")
-		mini_switch = Custom("Mini-switch", "icons/switch.png")
 
 	# Links
 	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="red", style="bold") >> firewall
