@@ -40,24 +40,15 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 
 	with Cluster("Zone DMZ \n VLAN 100 \n DHCP : 192.168.10.1-99"):
 		DMZ = Custom("192.168.100.0/24", "icons/networking.png")
-		web = Custom("[VM STOPPED] \n web.heuzef.com \n 192.168.100.101", "icons/status-stopped.png")
-		password = Custom("[VM] \n password.heuzef.com \n 192.168.100.102", "icons/lesspass.png")
 		heuzef_link = Custom("[VM] \n heuzef.link \n 192.168.100.103", "icons/shlink.png")
 		git = Custom("[VM] \n git.heuzef.com \n 192.168.100.104", "icons/gitea.png")
 		www = Custom("[VM] \n www.heuzef.com \n 192.168.100.105", "icons/web.png")
-		track = Custom("[VM STOPPED] \n track.heuzef.com \n 192.168.100.106", "icons/status-stopped.png")
-		matrix = Custom("[VM] \n matrix.heuzef.com \n 192.168.100.107", "icons/matrix.png")
 		coffre = Custom("[VM] \n coffre.heuzef.com \n 192.168.100.108", "icons/bitwarden.png")
 		proxy = Custom("[VM] \n proxy.heuzef.com \n 192.168.100.110", "icons/networking-app-gw.png")
 		kaladrius = Custom("[VM] \n kaladrius.fr \n 192.168.100.150", "icons/server.png")
 		ftb = Custom("[VM] \n ftb.heuzef.com \n 192.168.100.151", "icons/ftb.png")
 		lemurier_immo = Custom("[VM] \n lemurier.immo \n 192.168.100.152", "icons/web.png")
-		elvon_party = Custom("[VM STOPPED] \n elvon.party \n 192.168.100.153", "icons/status-stopped.png")
-		sopsy_fr = Custom("[VM STOPPED] \n sopsy.fr \n 192.168.100.154", "icons/status-stopped.png")
-		dontstarve = Custom("[VM STOPPED] \n dontstarve \n 192.168.100.155", "icons/status-stopped.png")
-		zomboid = Custom("[VM STOPPED] \n zomboid \n 192.168.100.156", "icons/status-stopped.png")
 		couvreur_cognac_fr = Custom("[VM] \n couvreur-cognac.fr \n 192.168.100.157", "icons/web.png")
-		linux_cognac_fr = Custom("[VM STOPPED] \n linux-cognac.fr \n 192.168.100.158", "icons/status-stopped.png")
 		cognhacker_net = Custom("[VM] \n cognhacker.net \n 192.168.100.159", "icons/cognhacker.png")
 
 	with Cluster("SPARE"):
