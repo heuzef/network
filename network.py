@@ -82,22 +82,13 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	HOME - switch
 	HOME - octoprint
 
-	DMZ - web
-	DMZ - password
 	DMZ - heuzef_link
 	DMZ - git
 	DMZ - www
 	DMZ - proxy
-	DMZ - track
-	DMZ - matrix
 	DMZ - coffre
 	DMZ - kaladrius
 	DMZ - ftb
 	DMZ - lemurier_immo
-	DMZ - elvon_party
-	DMZ - sopsy_fr
-	DMZ - dontstarve
-	DMZ - zomboid
 	DMZ - couvreur_cognac_fr
-	DMZ - linux_cognac_fr
 	DMZ - cognhacker_net
