@@ -8,19 +8,15 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	# Custom icons
 	internet = Custom("Internet", "icons/internet.png")
 	router = Custom("Routeur Free \n 192.168.0.1", "icons/router.png")
+	firewall = Custom("firewall.heuzef.com \n 192.168.0.2 \n OpenVPN 10.100.0.0/24", "icons/firewall.png")
 	ezy = Custom("Elocky EZY", "icons/cloud-keys.png")
 	elocky = Custom("Serveur Elocky", "icons/server-cloud.png")
-	wifi_free = Custom("Wi-Fi Free \n heuzef-cognac  \n  192.168.0.0/24", "icons/wifi.png")
-	devices = Custom("Peripheriques", "icons/devices.png")
 	aura = Custom("Aura", "icons/clock.png")
-	withings = Custom("Serveur Withings", "icons/server-cloud.png")
-	dyadpro = Custom("Dyad Pro", "icons/roborock.png")
-	roborock = Custom("Serveur Roborock", "icons/server-cloud.png")
-	imprimante = Custom("imprimante.heuzef.com", "icons/print.png")
-	firewall = Custom("firewall.heuzef.com \n 192.168.0.2 \n OpenVPN 10.100.0.0/24", "icons/firewall.png")
+	# withings = Custom("Serveur Withings", "icons/server-cloud.png")
+	# dyadpro = Custom("Dyad Pro", "icons/roborock.png")
+	# roborock = Custom("Serveur Roborock", "icons/server-cloud.png")
 
 	# Clusters
-
 	with Cluster("Zone HOME \n VLAN 10 \n DHCP : 192.168.10.1-99"):
 		HOME = Custom("192.168.10.0/24", "icons/networking.png")
 		pve = Custom("pve.heuzef.com \n 192.168.10.100", "icons/server.png")
@@ -35,6 +31,8 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		hongli = Custom("[VM STOPPED] \n hongli.heuzef.com \n 192.168.10.150", "icons/status-stopped.png")
 		switch = Custom("switch.heuzef.com \n 192.168.10.201", "icons/switch.png")
 		octoprint = Custom("octoprint.heuzef.com \n 192.168.10.203", "icons/octoprint.png")
+		devices = Custom("Peripheriques", "icons/devices.png")
+		imprimante = Custom("imprimante.heuzef.com \n 192.168.10.202 \n ", "icons/print.png")
 
 	with Cluster("Zone DMZ \n VLAN 100 \n DHCP : 192.168.10.1-99"):
 		DMZ = Custom("192.168.100.0/24", "icons/networking.png")
@@ -66,7 +64,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	firewall >> HOME
 	firewall >> DMZ
 
-	GUEST >> Edge(color="blue", style="dotted") >> wifi_guest
+	# GUEST >> Edge(color="blue", style="dotted") >> wifi_guest
 
 	HOME - pve
 	HOME - wifi
