@@ -20,13 +20,11 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	firewall = Custom("firewall.heuzef.com \n 192.168.0.2 \n OpenVPN 10.100.0.0/24", "icons/firewall.png")
 
 	# Clusters
-	with Cluster("[WIP] Zone GUEST \n VLAN 20 \n DHCP : 192.168.10.???-???"):
-		GUEST = Custom("192.168.20.0/24", "icons/networking.png")
-		wifi_guest = Custom("[WIP] \n Wi-Fi invite \n 192.168.20.0/24", "icons/wifi.png")
 
 	with Cluster("Zone HOME \n VLAN 10 \n DHCP : 192.168.10.1-99"):
 		HOME = Custom("192.168.10.0/24", "icons/networking.png")
 		pve = Custom("pve.heuzef.com \n 192.168.10.100", "icons/server.png")
+		wifi = Custom("Console Unifi \n 192.168.10.200/24", "icons/wifi.png")
 		pgmr = Custom("pgmr.heuzef.com \n 192.168.10.101", "icons/computer.png")
 		files = Custom("files.heuzef.com \n 192.168.10.110", "icons/files.png")
 		bmc = Custom("bmc.heuzef.com \n 192.168.10.111", "icons/controls.png")
@@ -57,12 +55,12 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 
 	# Links
 	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="red", style="bold") >> firewall
-	router >> Edge(color="blue", style="dotted") >> wifi_free
-	wifi_free << Edge(color="blue", style="dotted") << devices
-	wifi_free << Edge(color="blue", style="dotted") << imprimante
-	wifi_free << Edge(color="purple", style="dotted") << aura << Edge(color="purple") << withings
-	wifi_free << Edge(color="purple", style="dotted") << dyadpro << Edge(color="purple") << roborock
+	router >> Edge(color="blue", style="dotted")
 	router >> Edge(color="purple") >> ezy << Edge(color="purple", label="VPN over HTTPS") << elocky
+	wifi << Edge(color="blue", style="dotted") << devices
+	wifi << Edge(color="blue", style="dotted") << imprimante
+	# wifi << Edge(color="purple", style="dotted") << aura << Edge(color="purple") << withings
+	# wifi << Edge(color="purple", style="dotted") << dyadpro << Edge(color="purple") << roborock
 
 	firewall >> Edge(style="dotted") >> GUEST
 	firewall >> HOME
@@ -71,6 +69,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	GUEST >> Edge(color="blue", style="dotted") >> wifi_guest
 
 	HOME - pve
+	HOME - wifi
 	HOME - pgmr
 	HOME - files - Edge(color="orange") - proxy
 	HOME - media
