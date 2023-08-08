@@ -29,7 +29,8 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		octoprint = Custom("octoprint.heuzef.com \n 192.168.10.203", "icons/octoprint.png")
 		devices = Custom("Peripheriques", "icons/devices.png")
 		imprimante = Custom("imprimante.heuzef.com \n 192.168.10.202 \n ", "icons/print.png")
-		aura = Custom("Aura", "icons/clock.png")
+		brix = Custom("brix.heuzef.com \n 192.168.10.102", "icons/cpu.png")
+		aura = Custom("aura.heuzef.com \n 192.168.10.209", "icons/clock.png")
 		# dyadpro = Custom("Dyad Pro", "icons/roborock.png")
 
 	with Cluster("Zone DMZ \n VLAN 100 \n DHCP : 192.168.10.1-99"):
@@ -46,8 +47,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		cognhacker_net = Custom("[VM] \n cognhacker.net \n 192.168.100.159", "icons/cognhacker.png")
 		beboop_boo = Custom("[VM] \n beboop.boo \n 192.168.100.160", "icons/web.png")
 
-	with Cluster("SPARE"):
-		brix = Custom("brix.heuzef.com \n 192.168.10.102", "icons/cpu.png")
+	# with Cluster("SPARE"):
 
 	# Links
 	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="red", style="bold") >> firewall
