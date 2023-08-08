@@ -55,7 +55,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	router >> Edge(color="purple") >> ezy << Edge(color="purple", label="VPN over HTTPS") << elocky
 	wifi << Edge(color="blue", style="dotted") << devices
 	wifi << Edge(color="blue", style="dotted") << imprimante
-	wifi << Edge(color="purple", style="dotted") << aura << Edge(color="purple") << withings
+	wifi << Edge(color="purple", style="dotted") << aura
 	# wifi << Edge(color="purple", style="dotted") << dyadpro << Edge(color="purple") << roborock
 
 	firewall >> Edge(style="dotted")
