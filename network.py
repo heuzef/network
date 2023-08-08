@@ -11,10 +11,6 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	ezy = Custom("Elocky EZY", "icons/cloud-keys.png")
 	elocky = Custom("Serveur Elocky", "icons/server-cloud.png")
 	firewall = Custom("firewall.heuzef.com \n 192.168.0.2 \n OpenVPN 10.100.0.0/24", "icons/firewall.png")
-	# withings = Custom("Serveur Withings", "icons/server-cloud.png")
-	# aura = Custom("Aura", "icons/clock.png")
-	# dyadpro = Custom("Dyad Pro", "icons/roborock.png")
-	# roborock = Custom("Serveur Roborock", "icons/server-cloud.png")
 
 	# Clusters
 	with Cluster("Zone HOME \n VLAN 10 \n DHCP : 192.168.10.1-99"):
@@ -33,6 +29,8 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		octoprint = Custom("octoprint.heuzef.com \n 192.168.10.203", "icons/octoprint.png")
 		devices = Custom("Peripheriques", "icons/devices.png")
 		imprimante = Custom("imprimante.heuzef.com \n 192.168.10.202 \n ", "icons/print.png")
+		aura = Custom("Aura", "icons/clock.png")
+		# dyadpro = Custom("Dyad Pro", "icons/roborock.png")
 
 	with Cluster("Zone DMZ \n VLAN 100 \n DHCP : 192.168.10.1-99"):
 		DMZ = Custom("192.168.100.0/24", "icons/networking.png")
@@ -57,14 +55,12 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	router >> Edge(color="purple") >> ezy << Edge(color="purple", label="VPN over HTTPS") << elocky
 	wifi << Edge(color="blue", style="dotted") << devices
 	wifi << Edge(color="blue", style="dotted") << imprimante
-	# wifi << Edge(color="purple", style="dotted") << aura << Edge(color="purple") << withings
+	wifi << Edge(color="purple", style="dotted") << aura << Edge(color="purple") << withings
 	# wifi << Edge(color="purple", style="dotted") << dyadpro << Edge(color="purple") << roborock
 
 	firewall >> Edge(style="dotted")
 	firewall >> HOME
 	firewall >> DMZ
-
-	# GUEST >> Edge(color="blue", style="dotted") >> wifi_guest
 
 	HOME - pve
 	HOME - wifi
