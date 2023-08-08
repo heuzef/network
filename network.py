@@ -16,9 +16,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 	with Cluster("Zone HOME \n VLAN 10 \n DHCP : 192.168.10.1-99"):
 		HOME = Custom("192.168.10.0/24", "icons/networking.png")
 		pve = Custom("pve.heuzef.com \n 192.168.10.100", "icons/server.png")
-		wifi = Custom("Console Unifi \n 192.168.10.200/24", "icons/wifi.png")
 		pgmr = Custom("pgmr.heuzef.com \n 192.168.10.101", "icons/computer.png")
-		files = Custom("files.heuzef.com \n 192.168.10.110", "icons/files.png")
 		bmc = Custom("bmc.heuzef.com \n 192.168.10.111", "icons/controls.png")
 		media = Custom("media.heuzef.com \n 192.168.10.112", "icons/media-services.png")
 		cao = Custom("[VM STOPPED] \n cao.heuzef.com \n 192.168.10.113", "icons/status-stopped.png")
@@ -32,6 +30,8 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		brix = Custom("brix.heuzef.com \n 192.168.10.102", "icons/cpu.png")
 		aura = Custom("aura.heuzef.com \n 192.168.10.209", "icons/clock.png")
 		# dyadpro = Custom("Dyad Pro", "icons/roborock.png")
+		wifi = Custom("Console Unifi \n 192.168.10.200/24", "icons/wifi.png")
+		files = Custom("files.heuzef.com \n 192.168.10.110", "icons/files.png")
 
 	with Cluster("Zone DMZ \n VLAN 100 \n DHCP : 192.168.10.1-99"):
 		DMZ = Custom("192.168.100.0/24", "icons/networking.png")
