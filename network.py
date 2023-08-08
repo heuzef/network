@@ -30,8 +30,8 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M') , 
 		brix = Custom("brix.heuzef.com \n 192.168.10.102", "icons/cpu.png")
 		aura = Custom("aura.heuzef.com \n 192.168.10.209", "icons/clock.png")
 		# dyadpro = Custom("Dyad Pro", "icons/roborock.png")
-		wifi = Custom("Console Unifi \n 192.168.10.200/24", "icons/wifi.png")
 		files = Custom("files.heuzef.com \n 192.168.10.110", "icons/files.png")
+		wifi = Custom("Console Unifi \n 192.168.10.200/24", "icons/wifi.png")
 
 	with Cluster("Zone DMZ \n VLAN 100 \n DHCP : 192.168.10.1-99"):
 		DMZ = Custom("192.168.100.0/24", "icons/networking.png")
