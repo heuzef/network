@@ -25,6 +25,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 		hongli = Custom("[VM STOPPED] \n hongli.heuzef.com \n 192.168.10.150", "icons/status-stopped.png")
 		switch = Custom("switch.heuzef.com \n 192.168.10.201", "icons/switch.png")
 		octoprint = Custom("octoprint.heuzef.com \n 192.168.10.203", "icons/octoprint.png")
+		#prusa = Custom("mk4.heuzef.com \n 192.168.10.204", "icons/prusa.png")
 		devices = Custom("Peripheriques", "icons/devices.png")
 		imprimante = Custom("imprimante.heuzef.com \n 192.168.10.202 \n ", "icons/print.png")
 		brix = Custom("brix.heuzef.com \n 192.168.10.102", "icons/cpu.png")
@@ -75,6 +76,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	HOME - hongli
 	HOME - switch
 	HOME - octoprint
+	# HOME - prusa
 
 	DMZ - heuzef_link
 	DMZ - git
