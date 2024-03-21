@@ -47,12 +47,12 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 
 	# Links
 	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="red", style="bold") >> proxy
-	routeur << Edge(color="red", style="bold") << wifi
-	routeur << Edge(color="red", style="bold") << bmc
-	routeur << Edge(color="red", style="bold") << pve
-	routeur << Edge(color="red", style="bold") << switch
-	routeur << Edge(color="red", style="bold") << media
-	routeur << Edge(color="red", style="bold") << backup
+	router << Edge(color="red", style="bold") << wifi
+	router << Edge(color="red", style="bold") << bmc
+	router << Edge(color="red", style="bold") << pve
+	router << Edge(color="red", style="bold") << switch
+	router << Edge(color="red", style="bold") << media
+	router << Edge(color="red", style="bold") << backup
 	wifi << Edge(color="blue", style="dotted") << devices
 	wifi << Edge(color="blue", style="dotted") << imprimante
 	wifi << Edge(color="blue", style="dotted") << brix
