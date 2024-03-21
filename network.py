@@ -46,7 +46,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	proxy - beboop_boo
 
 	# Links
-	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="red", style="bold") >> proxy
+	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="green", style="bold") >> proxy
 	router << Edge(color="red", style="bold") << wifi
 	router << Edge(color="red", style="bold") << bmc
 	router << Edge(color="red", style="bold") << pve
