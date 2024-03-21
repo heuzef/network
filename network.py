@@ -21,7 +21,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 		media = Custom("[VM] media \n 192.168.0.111", "icons/media-services.png")
 		backup = Custom("[VM] \n backup \n 192.168.10.114", "icons/borg.png")
 		with Cluster("REVERSE-PROXY"):
-			proxy = Custom("[VM] \n proxy \n 192.168.0.101", "icons/networking-app-gw.png")
+			proxy = Custom("[VM] \n proxy \n 192.168.0.101", "icons/caddy.png")
 			vault = Custom("[VM] \n vault.heuzef.com \n 192.168.0.103", "icons/bitwarden.png")
 			git = Custom("[VM] \n git.heuzef.com \n 192.168.0.104", "icons/gitea.png")
 			cognhacker_net = Custom("[VM] \n cognhacker.net \n 192.168.0.105", "icons/cognhacker.png")
