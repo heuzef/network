@@ -7,6 +7,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 
 	# Custom icons
 	internet = Custom("Internet", "icons/internet.png")
+	hetzner = Custom("Hetzner", "icons/hetzner.png")
 	with Cluster("LAN"):
 		router = Custom("Routeur Free \n 192.168.0.1", "icons/router.png")
 		devices = Custom("Peripheriques \n Range DHCP", "icons/devices.png")
@@ -21,7 +22,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 		media = Custom("[VM] media \n 192.168.0.111", "icons/media-services.png")
 		backup = Custom("[VM] \n backup \n 192.168.10.114", "icons/borg.png")
 		with Cluster("REVERSE-PROXY"):
-			proxy = Custom("[VM] \n proxy \n 192.168.0.101", "icons/caddy.png")
+			proxy = Custom("[VM] \n CADDY \n 192.168.0.101", "icons/caddy.png")
 			vault = Custom("[VM] \n vault.heuzef.com \n 192.168.0.103", "icons/bitwarden.png")
 			git = Custom("[VM] \n git.heuzef.com \n 192.168.0.104", "icons/gitea.png")
 			cognhacker_net = Custom("[VM] \n cognhacker.net \n 192.168.0.105", "icons/cognhacker.png")
@@ -46,15 +47,16 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	proxy - beboop_boo
 
 	# Links
-	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="green", style="bold") >> proxy
+	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="blue", style="bold") >> proxy
+	internet >> Edge(color="green", style="bold") >> hertzner
+	internet << Edge(color="green", style="bold") << router << Edge(color="green", style="bold") >> backup
 	router << Edge(color="red", style="bold") << wifi
 	router << Edge(color="red", style="bold") << bmc
 	router << Edge(color="red", style="bold") << pve
 	router << Edge(color="red", style="bold") << switch
 	router << Edge(color="red", style="bold") << media
-	router << Edge(color="red", style="bold") << backup
-	wifi << Edge(color="blue", style="dotted") << devices
-	wifi << Edge(color="blue", style="dotted") << imprimante
-	wifi << Edge(color="blue", style="dotted") << brix
-	wifi << Edge(color="blue", style="dotted") << aura
-	wifi << Edge(color="blue", style="dotted") << pgmr
+	wifi << Edge(color="purple", style="dotted") << devices
+	wifi << Edge(color="purple", style="dotted") << imprimante
+	wifi << Edge(color="purple", style="dotted") << brix
+	wifi << Edge(color="purple", style="dotted") << aura
+	wifi << Edge(color="purple", style="dotted") << pgmr
