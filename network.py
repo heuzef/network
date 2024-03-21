@@ -7,7 +7,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 
 	# Custom icons
 	internet = Custom("Internet", "icons/internet.png")
-	hetzner = Custom("Hetzner", "icons/hetzner.png")
+	hetzner = Custom("Sauvegardes", "icons/hetzner.png")
 	with Cluster("LAN"):
 		router = Custom("Routeur Free \n 192.168.0.1", "icons/router.png")
 		devices = Custom("Peripheriques \n Range DHCP", "icons/devices.png")
@@ -48,7 +48,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 
 	# Links
 	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="blue", style="bold") >> proxy
-	hetzner << Edge(color="green", style="bold") >> backup
+	hetzner << Edge(color="green", label="FTTH", style="bold") >> backup
 	router << Edge(color="red", style="bold") << wifi
 	router << Edge(color="red", style="bold") << bmc
 	router << Edge(color="red", style="bold") << pve
