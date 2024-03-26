@@ -19,7 +19,6 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 		brix = Custom("Brix \n 192.168.0.202", "icons/cpu.png")
 		aura = Custom("Aura \n 192.168.0.203", "icons/clock.png")
 		switch = Custom("Switch \n 192.168.0.239", "icons/switch.png")
-		media = Custom("[VM] media \n 192.168.0.111", "icons/media-services.png")
 		backup = Custom("[VM] \n backup \n 192.168.10.114", "icons/borg.png")
 		with Cluster("REVERSE-PROXY"):
 			proxy = Custom("[VM] \n CADDY \n 192.168.0.101", "icons/caddy.png")
@@ -29,6 +28,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 			heuzef_link = Custom("[VM] \n heuzef.link \n 192.168.0.106", "icons/shlink.png")
 			files = Custom("[VM] files.heuzef.com \n 192.168.0.110", "icons/files.png")
 			www = Custom("[VM] \n heuzef.com \n 192.168.0.120", "icons/web.png")
+			media = Custom("[VM] media \n 192.168.0.111", "icons/media-services.png")
 			lemurier_immo = Custom("[VM] \n lemurier.immo \n 192.168.0.121", "icons/web.png")
 			couvreur_cognac_fr = Custom("[VM] \n couvreur-cognac.fr \n 192.168.0.122", "icons/web.png")
 			beboop_boo = Custom("[VM] \n beboop.boo \n 192.168.0.123", "icons/web.png")
@@ -41,6 +41,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	proxy - cognhacker_net
 	proxy - heuzef_link
 	proxy - files
+	proxy - media
 	proxy - www
 	proxy - lemurier_immo
 	proxy - couvreur_cognac_fr
@@ -53,7 +54,6 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	router << Edge(color="red", style="bold") << bmc
 	router << Edge(color="red", style="bold") << pve
 	router << Edge(color="red", style="bold") << switch
-	router << Edge(color="red", style="bold") << media
 	wifi << Edge(color="purple", style="dotted") << devices
 	wifi << Edge(color="purple", style="dotted") << imprimante
 	wifi << Edge(color="purple", style="dotted") << brix
