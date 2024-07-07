@@ -19,7 +19,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 		brix = Custom("Brix \n 192.168.0.202", "icons/cpu.png")
 		aura = Custom("Aura \n 192.168.0.203", "icons/clock.png")
 		switch = Custom("Switch \n 192.168.0.239", "icons/switch.png")
-		backup = Custom("[VM] \n backup \n 192.168.10.114", "icons/borg.png")
+		backup = Custom("[VM] \n backup \n 192.168.0.102", "icons/borg.png")
 		with Cluster("REVERSE-PROXY"):
 			proxy = Custom("[VM] \n CADDY \n 192.168.0.101", "icons/caddy.png")
 			vault = Custom("[VM] \n vault.heuzef.com \n 192.168.0.103", "icons/bitwarden.png")
