@@ -33,8 +33,10 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 			couvreur_cognac_fr = Custom("[VM] \n couvreur-cognac.fr \n 192.168.0.122", "icons/web.png")
 			beboop_boo = Custom("[VM] \n beboop.boo \n 192.168.0.123", "icons/web.png")
 			mk4 = Custom("mk4.heuzef.com \n 192.168.0.204", "icons/prusa.png")
+			factorio = Custom("factorio.heuzef.com \n 192.168.0.151", "icons/factorio.png")
 
 	# Reverse Proxy
+	proxy - factorio
 	proxy - mk4
 	proxy - vault
 	proxy -	git
