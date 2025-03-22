@@ -23,12 +23,11 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 		with Cluster("REVERSE-PROXY"):
 			proxy = Custom("[VM] \n CADDY \n 192.168.0.101", "icons/caddy.png")
 			vault = Custom("[VM] \n vault.heuzef.com \n 192.168.0.103", "icons/bitwarden.png")
-			cognhacker_net = Custom("[VM] \n cognhacker.net \n 192.168.0.105", "icons/cognhacker.png")
+			budget = Custom("[VM] \n cognhacker.net \n 192.168.0.104", "icons/wallos.png")
 			files = Custom("[VM] files.heuzef.com \n 192.168.0.110", "icons/files.png")
 			www = Custom("[VM] \n heuzef.com \n 192.168.0.120", "icons/web.png")
 			media = Custom("[VM] media \n 192.168.0.111", "icons/media-services.png")
 			lemurier_immo = Custom("[VM] \n lemurier.immo \n 192.168.0.121", "icons/web.png")
-			couvreur_cognac_fr = Custom("[VM] \n couvreur-cognac.fr \n 192.168.0.122", "icons/web.png")
 			mk4 = Custom("mk4.heuzef.com \n 192.168.0.204", "icons/prusa.png")
 			kaladrius = Custom("kaladrius.fr \n 192.168.0.150", "icons/kaladrius.png")
 			factorio = Custom("factorio.heuzef.com \n 192.168.0.151", "icons/factorio.png")
@@ -38,12 +37,11 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	proxy - factorio
 	proxy - mk4
 	proxy - vault
-	proxy - cognhacker_net
+	proxy - budget
 	proxy - files
 	proxy - media
 	proxy - www
 	proxy - lemurier_immo
-	proxy - couvreur_cognac_fr
 
 	# Links
 	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="blue", style="bold") >> proxy
