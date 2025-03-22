@@ -23,7 +23,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 		with Cluster("REVERSE-PROXY"):
 			proxy = Custom("[VM] \n CADDY \n 192.168.0.101", "icons/caddy.png")
 			vault = Custom("[VM] \n vault.heuzef.com \n 192.168.0.103", "icons/bitwarden.png")
-			budget = Custom("[VM] \n cognhacker.net \n 192.168.0.104", "icons/wallos.png")
+			budget = Custom("[VM] \n budget.heuzef.com \n 192.168.0.104", "icons/wallos.png")
 			files = Custom("[VM] files.heuzef.com \n 192.168.0.110", "icons/files.png")
 			www = Custom("[VM] \n heuzef.com \n 192.168.0.120", "icons/web.png")
 			media = Custom("[VM] media \n 192.168.0.111", "icons/media-services.png")
