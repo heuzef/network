@@ -9,17 +9,18 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	internet = Custom("Internet", "icons/internet.png")
 	hetzner = Custom("Sauvegardes", "icons/hetzner.png")
 	with Cluster("LAN"):
-		router = Custom("Routeur Free \n 192.168.0.1", "icons/router.png")
-		devices = Custom("Peripheriques \n Range DHCP", "icons/devices.png")
-		pgmr = Custom("PGMR \n 192.168.0.X", "icons/computer.png")
+		router = Custom("Routeur \n 192.168.0.1", "icons/router.png")
 		bmc = Custom("BMC \n 192.168.0.2", "icons/controls.png")
 		pve = Custom("PVE \n 192.168.0.100", "icons/server.png")
-		wifi = Custom("Wi-Fi \n 192.168.0.200/24", "icons/wifi.png")
-		imprimante = Custom("Imprimante \n 192.168.0.201 \n ", "icons/print.png")
-		brix = Custom("Brix \n 192.168.0.202", "icons/cpu.png")
-		aura = Custom("Aura \n 192.168.0.203", "icons/clock.png")
 		switch = Custom("Switch \n 192.168.0.239", "icons/switch.png")
 		backup = Custom("[VM] \n backup \n 192.168.0.102", "icons/borg.png")
+		with Cluster("WIFI-ZONE"):
+			wifi = Custom("Wi-Fi \n 192.168.0.200/24", "icons/wifi.png")
+			devices = Custom("Peripheriques \n Range DHCP", "icons/devices.png")
+			pgmr = Custom("PGMR \n 192.168.0.X", "icons/computer.png")
+			imprimante = Custom("Imprimante \n 192.168.0.201 \n ", "icons/print.png")
+			brix = Custom("Brix \n 192.168.0.202", "icons/cpu.png")
+			aura = Custom("Aura \n 192.168.0.203", "icons/clock.png")
 		with Cluster("REVERSE-PROXY"):
 			proxy = Custom("[VM] \n CADDY \n 192.168.0.101", "icons/caddy.png")
 			vault = Custom("[VM] \n vault.heuzef.com \n 192.168.0.103", "icons/bitwarden.png")
@@ -41,15 +42,17 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	proxy - www
 	proxy - lemurier_immo
 
-	# Links
-	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="blue", style="bold") >> proxy
-	hetzner << Edge(color="green", label="FTTH", style="bold") >> backup
-	router << Edge(color="red", style="bold") << wifi
-	router << Edge(color="red", style="bold") << bmc
-	router << Edge(color="red", style="bold") << pve
-	router << Edge(color="red", style="bold") << switch
+	# Wi-Fi
 	wifi << Edge(color="purple", style="dotted") << devices
 	wifi << Edge(color="purple", style="dotted") << imprimante
 	wifi << Edge(color="purple", style="dotted") << brix
 	wifi << Edge(color="purple", style="dotted") << aura
 	wifi << Edge(color="purple", style="dotted") << pgmr
+
+	# Links
+	internet >> Edge(color="red", label="FTTH", style="bold") >> router >> Edge(color="blue", style="bold") >> proxy
+	hetzner << Edge(color="green", label="FTTH", style="bold") >> backup
+	router << Edge(color="purple", style="bold") << wifi
+	router << Edge(color="red", style="bold") << bmc
+	router << Edge(color="red", style="bold") << pve
+	router << Edge(color="red", style="bold") << switch
