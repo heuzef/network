@@ -25,6 +25,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 			proxy = Custom("[VM] \n CADDY \n 192.168.0.101", "icons/caddy.png")
 			vault = Custom("[VM] \n vault.heuzef.com \n 192.168.0.103", "icons/bitwarden.png")
 			budget = Custom("[VM] \n budget.heuzef.com \n 192.168.0.104", "icons/wallos.png")
+			umami = Custom("[VM] \n analytics.heuzef.com \n 192.168.0.122", "icons/umami.png")
 			files = Custom("[VM] files.heuzef.com \n 192.168.0.110", "icons/files.png")
 			www = Custom("[VM] \n heuzef.com \n 192.168.0.122", "icons/web.png")
 			media = Custom("[VM] media.heuzef.com \n 192.168.0.111", "icons/media-services.png")
@@ -37,6 +38,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	proxy - mk4
 	proxy - vault
 	proxy - budget
+	proxy - umami
 	proxy - files
 	proxy - media
 	proxy - www
