@@ -4,7 +4,6 @@
 
 ````
 dnf install -y python3 python3-pip graphviz inkscape
-echo -e "diagrams==0.21.1\ngraphviz==0.16" | tee requirements.txt
 pip3 install -r requirements.txt
 ````
 
@@ -33,7 +32,6 @@ with Diagram("Network", show=False, filename="network", direction="TB"):
 ### Générer le diagramme
 
 ``python3 network.py``
-
 
 ## Icon-Collection
 * https://diagrams.mingrammer.com
