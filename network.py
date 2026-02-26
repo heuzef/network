@@ -26,6 +26,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 			vault = Custom("[VM] \n vault.heuzef.com \n 192.168.0.103", "icons/bitwarden.png")
 			budget = Custom("[VM] \n budget.heuzef.com \n 192.168.0.104", "icons/wallos.png")
 			notes = Custom("[VM] \n notes.heuzef.com \n 192.168.0.105", "icons/tududi.png")
+			claw = Custom("[VM] \n CLAW \n 192.168.0.106", "icons/openclaw.png")
 			umami = Custom("[VM] \n analytics.heuzef.com \n 192.168.0.122", "icons/umami.png")
 			files = Custom("[VM] files.heuzef.com \n 192.168.0.110", "icons/files.png")
 			www = Custom("[VM] \n heuzef.com \n 192.168.0.122", "icons/web.png")
@@ -42,6 +43,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	proxy - vault
 	proxy - budget
 	proxy - notes
+	proxy - claw
 	proxy - umami
 	proxy - files
 	proxy - media
