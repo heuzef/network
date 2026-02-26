@@ -31,7 +31,6 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 			files = Custom("[VM] files.heuzef.com \n 192.168.0.110", "icons/files.png")
 			www = Custom("[VM] \n heuzef.com \n 192.168.0.122", "icons/web.png")
 			media = Custom("[VM] media.heuzef.com \n 192.168.0.111", "icons/media-services.png")
-			lemurier_immo = Custom("[VM] \n lemurier.immo \n 192.168.0.121", "icons/web.png")
 			mk4 = Custom("mk4.heuzef.com \n 192.168.0.204", "icons/prusa.png")
 			lab = Custom("lab.heuzef.com \n 192.168.0.205", "icons/webcam.png")
 			# kaladrius = Custom("kaladrius.fr \n 192.168.0.150", "icons/kaladrius.png")
@@ -48,7 +47,6 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	proxy - files
 	proxy - media
 	proxy - www
-	proxy - lemurier_immo
 
 	# Wi-Fi
 	wifi << Edge(color="purple", style="dotted") << devices
