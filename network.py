@@ -20,7 +20,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 			pgmr = Custom("PGMR \n 192.168.0.X", "icons/computer.png")
 			imprimante = Custom("Imprimante \n 192.168.0.201 \n ", "icons/print.png")
 			brix = Custom("Brix \n 192.168.0.202", "icons/cpu.png")
-			aura = Custom("Aura \n 192.168.0.203", "icons/clock.png")
+			# aura = Custom("Aura \n 192.168.0.203", "icons/clock.png")
 		with Cluster("REVERSE-PROXY"):
 			proxy = Custom("[VM] \n CADDY \n 192.168.0.101", "icons/caddy.png")
 			vault = Custom("[VM] \n vault.heuzef.com \n 192.168.0.103", "icons/bitwarden.png")
@@ -52,7 +52,7 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 	wifi << Edge(color="purple", style="dotted") << devices
 	wifi << Edge(color="purple", style="dotted") << imprimante
 	wifi << Edge(color="purple", style="dotted") << brix
-	wifi << Edge(color="purple", style="dotted") << aura
+	# wifi << Edge(color="purple", style="dotted") << aura
 	wifi << Edge(color="purple", style="dotted") << pgmr
 
 	# Links
