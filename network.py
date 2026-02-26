@@ -34,10 +34,10 @@ with Diagram("Carte reseau de Heuzef - %s" % today.strftime('%d/%m/%Y %H:%M'), s
 			lemurier_immo = Custom("[VM] \n lemurier.immo \n 192.168.0.121", "icons/web.png")
 			mk4 = Custom("mk4.heuzef.com \n 192.168.0.204", "icons/prusa.png")
 			lab = Custom("lab.heuzef.com \n 192.168.0.205", "icons/webcam.png")
-			kaladrius = Custom("kaladrius.fr \n 192.168.0.150", "icons/kaladrius.png")
+			# kaladrius = Custom("kaladrius.fr \n 192.168.0.150", "icons/kaladrius.png")
 
 	# Reverse Proxy
-	proxy - kaladrius
+	# proxy - kaladrius
 	proxy - mk4
 	proxy - lab
 	proxy - vault
