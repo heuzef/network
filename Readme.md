@@ -44,3 +44,8 @@ with Diagram("Network", show=False, filename="network", direction="TB"):
 ### Récupérer et convertir une image de la collection avec Inkscape
 
 ``inkscape -w 1024 -h 1024 icon-collection/azure-patterns/server.svg -o icons/server.png``
+
+### Récupérer une icone
+
+# https://dashboardicons.com
+``cd icons && wget https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/ICON_NAME.png``
